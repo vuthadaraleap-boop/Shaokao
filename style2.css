@@ -370,7 +370,7 @@
             /* Discount Badge */
             .discount {
                 position: absolute;
-                top: 20px;
+                top: 100%;
                 padding: 10px 22px;
                 border-radius: 25px;
                 font-weight: 600;
@@ -418,3 +418,4 @@
                 .banner-text h3 { font-size: 1rem; }
                 .banner-text p { font-size: 0.9rem; }
             }
+

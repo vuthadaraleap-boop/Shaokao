@@ -1,0 +1,420 @@
+    /* Importing Google fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+
+    :root {
+        /* Colors */
+        --white-color: #fff;
+        --dark-color: #252525;
+        --primary-color: #090505;
+        --secondary-color: #ff0606;
+        --light-pink-color: #faf4f5;
+        --medium-gray-color: #ccc;
+
+        /* Font size */
+        --font-size-s: 0.9rem;
+        --font-size-n: 1rem;
+        --font-size-m: 1.12rem;
+        --font-size-l: 1.5rem;
+        --font-size-xl: 2rem;
+        --font-size-xxl: 2.3rem;
+
+        /* Font weight */
+        --font-weight-normal: 400;
+        --font-weight-medium: 500;
+        --font-weight-semibold: 600;
+        --font-weight-bold: 700;
+
+        /* Border radius */
+        --border-radius-s: 8px;
+        --border-radius-m: 30px;
+        --border-radius-circle: 50%;
+
+        /* Site max width */
+        --site-max-width: 1300px;
+    }
+
+    body {
+        background: url(https://media.gettyimages.com/id/507728712/video/steam-on-black-background.jpg?s=640x640&k=20&c=SsXXhJ_kFNE0az9q7PHu1s-XfpXz_YARXpXRlMxRI2w=)
+            no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 100px 20px 40px;
+        scroll-behavior: smooth;
+    }
+
+
+    /* Global Stylings */
+    html { scroll-behavior: smooth; }
+    ul { list-style: none; }
+    a { text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; }
+    .section-content { margin: 0 auto; padding: 0 20px; max-width: var(--site-max-width); }
+
+    /* Header / Navbar */
+    header {
+        background: var(--primary-color);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .nav-logo img {
+        width: 50px;
+        height: 60px;
+        border-radius: var(--border-radius-circle);
+        object-fit: cover;
+    }
+
+    .navbar .nav-logo .logo-text {
+        color: var(--white-color);
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-semibold);
+    }
+
+    .navbar .nav-menu {
+        display: flex;
+        gap: 10px;
+    }
+
+    .navbar .nav-menu .nav-link {
+        padding: 10px 18px;
+        color: var(--white-color);
+        font-size: var(--font-size-m);
+        background: var(--primary-color);
+        border-radius: var(--border-radius-m);
+        transition: all 0.3s ease;
+    }
+
+    .navbar .nav-menu .nav-link:hover {
+        color: var(--white-color);
+        background: var(--secondary-color);
+        transform: translateY(-2px);
+    }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: var(--white-color);
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+
+    /* Navbar Responsive */
+    @media (max-width: 768px) {
+        .menu-toggle { display: flex; }
+        .navbar .nav-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--primary-color);
+            flex-direction: column;
+            padding: 20px;
+            gap: 10px;
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .navbar .nav-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    /* Fade-in Animations */
+    @keyframes fadeInLeft { from { opacity: 0; transform: translateX(-30px);} to { opacity: 1; transform: translateX(0);} }
+    @keyframes fadeInRight { from { opacity: 0; transform: translateX(30px);} to { opacity: 1; transform: translateX(0);} }
+
+
+            /* ============================= */
+            /*       Banner Styles           */
+            /* ============================= */
+            .banner {
+                width: 100%;
+                max-width: 1200px;
+                margin: 20px auto;
+                border-radius: 30px;
+                overflow: hidden;
+                background: rgba(0, 0, 0, 0.2);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                transition: transform 0.5s ease, box-shadow 0.5s ease;
+            }
+
+            .banner:hover {
+                transform: translateY(-8px) scale(1.02);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            }
+
+            .banner-inner {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 40px;
+            }
+
+            /* Alternate layout: text left / right */
+            .banner:nth-child(odd) .banner-inner {
+                flex-direction: row;
+            }
+
+            .banner:nth-child(even) .banner-inner {
+                flex-direction: row-reverse;
+            }
+
+            /* Banner Image */
+            .banner-image {
+                flex: 1 1 45%;
+                min-width: 250px;
+                max-width: 500px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .banner-image img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                transition: transform 0.6s ease;
+            }
+
+            .banner-image .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.25);
+            }
+
+            /* Banner Text */
+            .banner-text {
+                flex: 1 1 45%;
+                min-width: 250px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: #fff;
+                text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            }
+
+            .banner-text h1 {
+                font-size: 2.2rem;
+                margin-bottom: 10px;
+            }
+
+            .banner-text h3 {
+                font-size: 1.2rem;
+                margin-bottom: 6px;
+            }
+
+            .banner-text p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            /* Discount Badge */
+            .discount {
+                position: absolute;
+                top: 20px;
+                padding: 10px 22px;
+                border-radius: 30px;
+                font-weight: 600;
+                background: linear-gradient(135deg, #ff6f61, #ffdd00);
+                color: #fff;
+                box-shadow: 0 5px 15px rgba(255, 223, 0, 0.4);
+                animation: float 2s ease-in-out infinite alternate;
+            }
+
+            /* Odd banners: discount on right */
+            .banner:nth-child(odd) .discount {
+                right: 20px;
+                left: auto;
+            }
+
+            /* Even banners: discount on left */
+            .banner:nth-child(even) .discount {
+                left: 20px;
+                right: auto;
+            }
+
+            /* Float animation */
+            @keyframes float {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-10px); }
+            }
+
+
+
+            /* ============================= */
+            /*       Banner Styles Fix        */
+            /* ============================= */
+            .banner {
+                width: 100%;
+                max-width: 1200px;
+                margin: 20px auto;
+                border-radius: 30px;
+                overflow: hidden;
+                background: rgba(0, 0, 0, 0.2);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                transition: transform 0.5s ease, box-shadow 0.5s ease;
+            }
+
+            .banner:hover {
+                transform: translateY(-8px) scale(1.02);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+            }
+
+            .banner-inner {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 40px;
+            }
+
+            /* Alternate layout: text left / right */
+            .banner:nth-child(odd) .banner-inner { flex-direction: row; }
+            .banner:nth-child(even) .banner-inner { flex-direction: row-reverse; }
+
+            /* Banner Image Animation */
+            .banner-image img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                transition: transform 0.6s ease, filter 0.6s ease;
+                transform: scale(0.95); /* start slightly smaller for entry animation */
+                filter: brightness(0.9);
+                opacity: 0;
+                animation: imageFadeIn 1s ease forwards;
+            }
+
+            /* Even/Odd image animations */
+            .banner:nth-child(even) .banner-image img {
+                animation: imageFadeInRight 1s ease forwards;
+            }
+
+            /* Hover Effect */
+            .banner-image img:hover {
+                transform: scale(1.05);
+                filter: brightness(1);
+            }
+
+            /* Keyframes */
+            @keyframes imageFadeIn {
+                from { opacity: 0; transform: scale(0.95) translateX(-30px); }
+                to { opacity: 1; transform: scale(1) translateX(0); }
+            }
+
+            @keyframes imageFadeInRight {
+                from { opacity: 0; transform: scale(0.95) translateX(30px); }
+                to { opacity: 1; transform: scale(1) translateX(0); }
+            }
+
+            /* Banner Text */
+            .banner-text {
+                flex: 1 1 45%;
+                min-width: 250px;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                color: #fff;
+                text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+                opacity: 0;
+                animation: fadeInLeft 1s ease forwards;
+            }
+
+            .banner:nth-child(even) .banner-text {
+                animation: fadeInRight 1s ease forwards;
+            }
+
+            .banner-text h1 { font-size: 2.2rem; margin-bottom: 10px; }
+            .banner-text h3 { font-size: 1.2rem; margin-bottom: 6px; }
+            .banner-text p { font-size: 1rem; line-height: 1.5; }
+
+            /* Discount Badge */
+            .discount {
+                position: absolute;
+                top: 20px;
+                padding: 10px 22px;
+                border-radius: 25px;
+                font-weight: 600;
+                font-size: 0.9rem;
+                background: linear-gradient(135deg, #ff6f61, #ffdd00);
+                color: #fff;
+                box-shadow: 0 5px 15px rgba(255,223,0,0.4);
+                animation: float 2s ease-in-out infinite alternate;
+                z-index: 10;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .discount:hover { transform: scale(1.1); box-shadow: 0 8px 20px rgba(255,223,0,0.5); }
+
+            /* Odd banners: right corner */
+            .banner:nth-child(odd) .discount { right: 15px; left: auto; }
+            /* Even banners: left corner */
+            .banner:nth-child(even) .discount { left: 15px; right: auto; }
+
+            /* ============================= */
+            /*       Animations               */
+            /* ============================= */
+            @keyframes fadeInLeft { from { opacity:0; transform: translateX(-30px);} to { opacity:1; transform: translateX(0); } }
+            @keyframes fadeInRight { from { opacity:0; transform: translateX(30px);} to { opacity:1; transform: translateX(0); } }
+            @keyframes float { 0% { transform: translateY(0);} 100% { transform: translateY(-8px); } }
+
+            /* ============================= */
+            /*       Responsive Adjustments   */
+            /* ============================= */
+            @media(max-width: 1024px) {
+                .banner-inner { gap: 30px; }
+                .banner-image, .banner-text { max-width: 48%; }
+            }
+
+            @media(max-width: 768px) {
+                .banner-inner { flex-direction: column; gap: 20px; animation: fadeInLeft 0.8s ease forwards; }
+                .banner-image, .banner-text { min-width: 100%; max-width: 100%; }
+                .banner-text { text-align: center; padding: 20px; animation: fadeInLeft 0.8s ease forwards; }
+                .discount { position: static; margin: 10px auto 0 auto; }
+            }
+
+            @media(max-width: 480px) {
+                .banner-inner { flex-direction: column; align-items: center; animation: fadeInLeft 0.8s ease forwards; }
+                .banner-text h1 { font-size: 1.8rem; }
+                .banner-text h3 { font-size: 1rem; }
+                .banner-text p { font-size: 0.9rem; }
+            }

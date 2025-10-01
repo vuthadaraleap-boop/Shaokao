@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaokao - Authentic Chinese BBQ Skewers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style3.css">
+
+</head>
+ <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <img src="https://scontent.fpnh26-1.fna.fbcdn.net/v/t39.30808-6/285269005_162958812882127_1879963568097764751_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEoGTeK9Z8d6iNMgDxxTtv6di4kphUYbuN2LiSmFRhu4yyiy8ntuh-uNYTY_iMVoFBY2UHhaZlYxMzWFAPs9N6l&_nc_ohc=1I4fvHGLYhIQ7kNvwGFBngg&_nc_oc=AdnBTucqbNvBEpj1Z4CoJBNkOqOnp2rYjzXxa5IxLH9bLJ1mof295ly3EW96XNcPo7w&_nc_zt=23&_nc_ht=scontent.fpnh26-1.fna&_nc_gid=Obnfmo-hK7VthoEIbA8PmQ&oh=00_AfbsAgNTHShkkQYNZMrI1i9O0RMzcDOmuZrR8nQoOWPa-w&oe=68E19601"
+                     alt="Shaokao Logo">
+                <h2 class="logo-text">Shaokao</h2>
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+        <section class="about-section section-content">
+            <h1>About Shaokao</h1>
+            <p>Welcome to Shaokao, your ultimate small shop experience. We specialize in authentic, delicious dishes made with love and fresh ingredients. Our mission is to bring you flavors that excite your taste buds and make every visit unforgettable.</p>
+            <p>Founded in 2023, Shaokao has quickly become a favorite spot for food lovers in the community. Whether you're grabbing a quick snack or enjoying a meal with friends and family, we promise quality, taste, and a cozy atmosphere.</p>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Shaokao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar section-content">
+            <a href="#" class="nav-logo">
+                <img src="https://scontent.fpnh26-1.fna.fbcdn.net/v/t39.30808-6/285269005_162958812882127_1879963568097764751_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEoGTeK9Z8d6iNMgDxxTtv6di4kphUYbuN2LiSmFRhu4yyiy8ntuh-uNYTY_iMVoFBY2UHhaZlYxMzWFAPs9N6l&_nc_ohc=1I4fvHGLYhIQ7kNvwGFBngg&_nc_oc=AdnBTucqbNvBEpj1Z4CoJBNkOqOnp2rYjzXxa5IxLH9bLJ1mof295ly3EW96XNcPo7w&_nc_zt=23&_nc_ht=scontent.fpnh26-1.fna&_nc_gid=Obnfmo-hK7VthoEIbA8PmQ&oh=00_AfbsAgNTHShkkQYNZMrI1i9O0RMzcDOmuZrR8nQoOWPa-w&oe=68E19601" 
+                     alt="Shaokao Logo">
+                <h2 class="logo-text">Shaokao</h2>
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Contact Section -->
+        <section class="contact-section section-content">
+            <h1>Contact Shaokao</h1>
+            <p>We’d love to hear from you! Reach out to us with any questions or feedback.</p>
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <div class="info-box">
+                    <h3>Address</h3>
+                    <p>#174E1 Street 336, Sangkat Beoung Salang, Khan Toul Kork, Phnom Penh, 12060, Cambodia</p>
+                </div>
+                <div class="info-box">
+                    <h3>Phone</h3>
+                    <p>010 735 315</p>
+                </div>
+                <div class="info-box">
+                    <h3>Email</h3>
+                    <p>chhayhourt95@gmail.com</p>
+                </div>
+                <div class="info-box">
+                    <h3>Instagram</h3>
+                    <p><a href="https://www.instagram.com/shaokaokh/" target="_blank">shaokaokh</a></p>
+                </div>
+            </div>
+
+            <!-- Embedded Google Map -->
+            <div class="map">
+               <div class="map">
+                <iframe 
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.965577708299!2d104.89475797772663!3d11.554325415111885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109512eefff42fd%3A0x1b3fe6d5750380f2!2z4Z6Y4Z644Z6B4Z6R4Z62MzM2IOGelOGeueGehOGen-GetuGeoeGetuGehA!5e0!3m2!1sen!2skh!4v1759320941821!5m2!1sen!2skh" 
+                 width="100%" 
+                 height="450" 
+                 style="border:0;" 
+                 allowfullscreen="" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
